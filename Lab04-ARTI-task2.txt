@@ -1,0 +1,29 @@
+Lab04-ARTI-task2
+
+41 ?- female(X).
+X = sara ;
+X = nora.
+
+42 ?- male(X).
+X = ali ;
+X = ahmad ;
+X = muhammad ;
+X = faisal ;
+X = hassan ;
+X = khan.
+
+43 ?- parent(G, P), parent(P, faisal).
+G = ali,
+P = muhammad ;
+false.
+
+44 ?- parent(ahmad, X), female(X).
+X = sara ;
+X = nora ;
+false.
+
+45 ?- parent(P, ahmad), parent(P, muhammad).
+P = ali.
+
+46 ?- parent(P, khan), parent(P, nora), male(khan).
+P = ahmad.

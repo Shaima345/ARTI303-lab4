@@ -1,0 +1,44 @@
+Lab04-ARTI-task1
+
+23 ?- house = house.
+true.
+Reason: Both are the same atom.
+
+24 ?- house = abc.
+false.
+Reason: Two different constants.
+
+25 ?- edge(a,b) = edge(C,b).
+C = a.
+Reason: Same functor and arity; C takes a.
+
+26 ?- edge(a,d) = edge(C,B).
+C = a,
+B = d.
+Reason: Each variable takes the constant in its position.
+
+27 ?- edge(C,B) = edge(a,d).
+C = a,
+B = d.
+Reason: Same as the previous query, sides swapped.
+
+28 ?- edge(A,f(g,h)) = edge(a,B).
+A = a,
+B = f(g, h).
+Reason: A takes a, and B takes the whole structure f(g,h).
+
+29 ?- edge(A,A) = edge(b,c).
+false.
+Reason: A cannot be both b and c.
+
+30 ?- edge(A,A) = edge(b,b).
+A = b.
+Reason: Both positions agree that A is b.
+
+31 ?- A = B, B = f.
+A = B, B = f.
+Reason: A is linked to B, and B takes f.
+
+32 ?- A = B, B = f, A = e.
+false.
+Reason: A is already f, and f cannot unify with e.
